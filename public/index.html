@@ -24,11 +24,35 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        
     <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <header>         
+      <nav class="nav">
+          <a href="index.html" class="logo">Ormond Custom Engravers</a>
+  
+          <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+  
+          <div class="nav__link hide">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html">Blog</a>
+          </div>
+        </nav>
+  </header>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +63,84 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <section class="container">
+      <div class="info-container">
+        <h1>The kind of <strong>quality</strong> & <strong>dedication</strong> you can only expect from the best.</h1>
+        <p>Unleash the beauty of natural materials through our laser engraving expertise. Witness intricate woodwork as we etch detailed designs, turning plain surfaces into personalized masterpieces. 
+        </p>
+      </div>
+        
+    </section>
+        
+
+        <section>
+        <h2>The Best Materials for the Best Results</h2>
+     
+            
+        
+            
+            <section>
+            <P>
+            Each material offers unique characteristics, allowing for diverse and stunning engraving results. Explore the possibilities of personalization and intricate detailing across these stone, wood, and metal surfaces.
+            </p>
+            </section>
+      </section>
+
+      <section>
+        <div class="product-container">
+          <div class="slider-wrapper">
+            <div class="image-list">
+              <img src="images/place holder 1 beta.jpg" alt="img-1" class="image-item">
+              <img src="images/place holder 2 beta.jpg" alt="img-1" class="image-item">
+              <img src="images/place holder 3 beta.jpg" alt="img-1" class="image-item">
+              <img src="images/place holder 4 beta.jpg" alt="img-1" class="image-item">
+              <img src="images/place holder 5 beta.jpg" alt="img-1" class="image-item">
+              <img src="images/place holder 6 beta.jpg" alt="img-1" class="image-item">
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+    <section class="product">
+        <h3 class="product-catagory">OUR ENGRAVINGS</h3>
+        <div class="gallery-wrap">
+          
+           <div class="carousel-container">
+            <div class="carousel-view">
+
+                    <!--the left button-->
+                    <button id="pre-btn" class="pre-btn"><svg viewBox="0 0 512 512" width="20" title="chevron-circle-left">
+                        <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
+                      </svg> </button>
+
+                    <!--The list container-->
+
+                    <div id="item-list" class="item-list">
+
+                        <!-- images-->
+
+                        <img id="item" class="item" src="images/place holder 1 beta.jpg">
+                        <img id="item" class="item" src="images/place holder 2 beta.jpg">
+                        <img id="item" class="item" src="images/place holder 3 beta.jpg">
+                        <img id="item" class="item" src="images/place holder 4 beta.jpg">
+                    </div>
+
+                    <!--right button-->
+                    <button id="nxt-btn" class="nxt-btn"> <svg viewBox="0 0 512 512" width="20" title="chevron-circle-right">
+                        <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
+                      </svg></button>
+            </div>
+           </div>
+           
+        </div>
+      
+        
+    </section>
+
+    <script src="app.js"></script>
   </body>
 </html>

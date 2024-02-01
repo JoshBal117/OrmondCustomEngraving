@@ -1,24 +1,46 @@
 import logo from './logo.svg';
 import './App.css';
+import './index.css'
+
+const hamburger = document.querySelector('.hamburger');
+const navLink = document.querySelector('.nav__link');
+
+hamburger.addEventListener('click', () => {
+  navLink.classList.toggle('hide');
+});
+
+
+
+
+const pre = document.getElementById('pre-btn')
+const nxt = document.getElementById('nxt-btn')
+const list = document.getElementById('item-list')
+const itemWidth = 150
+const padding = 10
+
+pre.addEventListener('click', () => {
+    list.scrollLeft -= (itemWidth + padding)
+})
+nxt.addEventListener('click',()=>{
+    list.scrollLeft += (itemWidth + padding)
+})
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar
     </div>
+  
+
+  
+  
+  
+  
+  
   );
 }
 
