@@ -1,10 +1,13 @@
 import React from "react";
 import './Navbar.css'
+
+
 const Navbar = () =>  {
 
     return(
         <nav class="nav">
-        <a href="index.html" class="logo">Ormond Custom Engravers</a>
+        <a href="index.html" class="logo" img>Ormond Custom Engraving</a>
+       
 
         <div class="hamburger">
           <span class="line"></span>
