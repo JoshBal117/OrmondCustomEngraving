@@ -1,6 +1,6 @@
 import React from "react";
 import './Navbar.css'
-
+import logo from '../Images/OCE LOGO.png'
 
 const hamburger = document.querySelector('.hamburger');
 const navLink = document.querySelector('.nav__link');
@@ -14,7 +14,7 @@ const Navbar = () =>  {
 
     return(
         <nav class="nav">
-        <a href="index.html" class="logo" img>Ormond Custom Engraving</a>
+        <a href="index.html" class="logo" img src={logo} >Ormond Custom Engraving</a>
        
 
         <div class="hamburger">

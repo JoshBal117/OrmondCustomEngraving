@@ -1,12 +1,18 @@
 
 import './App.css';
 import './index.css';
-import Navbar from './Components/Assests/Navbar/navbar.jsx'
+import Navbar from './Components/Assests/Navbar/navbar.jsx';
+
+
 
 function App() {
-  return (
-    <div>
+    return (
+    <div className='App'>
+      
       <Navbar/>
+     
+     
+      
     </div>
   );
 }
