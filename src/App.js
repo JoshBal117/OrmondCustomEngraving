@@ -3,11 +3,11 @@ import './App.css';
 import './index.css';
 import Navbar from './Components/Assests/Navbar/navbar.jsx';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import Shop from './Pages/Shop.jsx'
-import ShopCategory from './Pages/ShopCategory.jsx'
-import Product from './Pages/Product.jsx'
-import Cart from './Pages/Cart.jsx'
-import Login from './Pages/LoginSignup.jsx'
+import Shop from './Pages/Shop.jsx';
+import ShopCategory from './Pages/ShopCategory.jsx';
+import Product from './Pages/Product.jsx';
+import Cart from './Pages/Cart.jsx';
+import LoginSignup from './Pages/LoginSingup.jsx';
 
 
 
