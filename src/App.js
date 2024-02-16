@@ -9,7 +9,7 @@ import Product from './Pages/Product.jsx';
 import Cart from './Pages/Cart.jsx';
 import LoginSignup from './Pages/LoginSingup.jsx';
 
-
+    
 
 function App() {
     return (
@@ -18,9 +18,9 @@ function App() {
     <Navbar/>
     <Routes>
       <Route path='/' element={<Shop/>}/>
-      <Route path='/tumbler' element={<ShopCategory/>}/>
-      <Route path='/Acrylics' element={<ShopCategory/>}/>
-      <Route path='/Metals' element={<ShopCategory/>}/>
+      <Route path='/tumbler' element={<ShopCategory category="tumbler"/>}/>
+      <Route path='/Acrylics' element={<ShopCategory category="Acrylics"/>}/>
+      <Route path='/Metals' element={<ShopCategory category="Metals"/>}/>
       <Route path="/Product" element={<Product/>}>
         <Route path=':productId' element={<Product/>}/>
       </Route>

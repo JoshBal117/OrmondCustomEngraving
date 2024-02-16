@@ -12,10 +12,19 @@ hamburger.addEventListener('click', () => {
 
 const Navbar = () =>  {
 
+  const [menu,setMenu] = useState("shop");
+
     return(
         <nav class="nav">
         <a href="index.html" class="logo" img src={logo} >Ormond Custom Engraving</a>
-       
+      
+      <ul className= "nav-menu">
+        <li onClock={()=>{setMenu("Shop")}}><Link to='/'>Shop</Link>{menu==="shop"?<hr/>:<></>}</li>
+        <li onClock={()=>{setMenu("Acrylics")}}><Link to='/'>Acrylics</Link>{menu==="Acrylics"?<hr/>:<></>}</li>
+        <li onClock={()=>{setMenu("Metals")}}><Link to='/'>Metals</Link>{menu==="Metals"?<hr/>:<></>}</li>
+        <li onClock={()=>{setMenu("tumbler")}}><Link to='/'>Tumbler</Link>{menu==="Tumbler"?<hr/>:<></>}</li>
+        
+      </ul>
 
         <div class="hamburger">
           <span class="line"></span>

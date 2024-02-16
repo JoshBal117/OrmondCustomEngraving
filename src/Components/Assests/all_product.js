@@ -78,7 +78,7 @@ let all_product = [
     },
     {
         id:4,
-        name: "12oz Silver Insulated Stemless Wine  Tumbler",
+        name: "12oz Silver Insulated Stemless Wine Tumbler",
         category: "tumblers",
         img: p4_img,
         price: 19.99,
