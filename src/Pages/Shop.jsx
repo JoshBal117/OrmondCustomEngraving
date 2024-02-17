@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from '../Components/Assests/Hero/Hero'
+import Hero from '../Components/Hero/Hero'
 
 const Shop = () => {
 

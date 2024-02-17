@@ -5,6 +5,7 @@ import cart_icon from '../Assests/Images/cart-icon.png';
 
 
 
+
 const Navbar = () => {
 
     const [menu,setMenu] = useState("shop");
