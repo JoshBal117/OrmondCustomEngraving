@@ -5,13 +5,11 @@ import facebook_icon from '../Assests/Images/facebook_logo_icon.png'
 import pinterest_icon from '../Assests/Images/pinterest_icon.png'
 
 const Footer = () => {
-
     return(
         <div className='footer'>
             <div className="footer-logo">
                 <img src="" alt="" />
                 <p>Ormond Custom Engraving</p>
-
             </div>
             <ul className='footer-links'>
                 <li>Company</li>
@@ -31,9 +29,9 @@ const Footer = () => {
                     <img src={pinterest_icon} alt="" />
                 </div>
             </div>
-            <div className="footer-copuright">
+            <div className="footer-copyight">
                 <hr />
-                <p>Copyright @ 2024 All Right Reserve</p>
+                <p>Copyright @ 2024 All Rights Reserved</p>
             </div>
         </div>
         

@@ -6,12 +6,12 @@ import Item from '../item/item'
 const Popular = () =>{
 
     return(
-        <div>
+        <div className='popular'>
           <h1>Most Popular Items</h1>
           <hr />
-          <div className="popular-items">
+          <div className='popular-item'>
             {data_product.map((item,i)=>{
-                return <Item key={i} id={item.id}  name={item.name} image={item.image} current_price={item.current_price} description={item.description}/>
+                return <Item key={i} id={item.id}  name={item.name} image={item.image} current_price={item.current_price}/>
             })}
                 </div>  
         </div>
