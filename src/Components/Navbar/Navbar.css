@@ -1,8 +1,9 @@
 .navbar{
   display: flex;
   justify-content: space-around;
-  padding: 16px;
+  padding: 20px;
   box-shadow: 0 1px 3px -2px black;
+  background: linear-gradient(100deg, #6ABB03, #e1ffea22 90%) ;
 
 }
 
@@ -17,7 +18,7 @@
   align-items: center;
   list-style: none;
   gap: 50px;
-  color: #32cd32;
+  color: #e1ffea22;
   font-size: 20px;
   font-weight: 500;
 }
