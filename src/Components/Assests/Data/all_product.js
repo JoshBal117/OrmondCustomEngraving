@@ -425,14 +425,14 @@ let all_product = [
         id: 50,
         name: "Light Brown Leather Name Patch",
         category: "leather",
-        image: cp2_img,
+        img: cp2_img,
         price: 9.99,
     },
     {
         id: 51,
         name: "Black Leather Name Patch",
         category: "leather",
-        image: cp3_img,
+        img: cp3_img,
         price: 9.99,
     },
     {
@@ -447,7 +447,7 @@ let all_product = [
         name: "Red Leather Name Patch",
         category: "leather",
         img: cp5_img,
-        current_price: 9.99,
+        price: 9.99,
     },
     {
         id: 54,
@@ -460,7 +460,7 @@ let all_product = [
         id: 55,
         name: "Gray Leather Name Tag",
         category: "leather",
-        imge: cp7_img,
+        img: cp7_img,
         price: 9.99,
     },
     {
