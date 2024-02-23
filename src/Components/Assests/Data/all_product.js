@@ -412,7 +412,7 @@ let all_product = [
         name: "16oz Stainless Steel Insulated Pint Tumbler",
         category: "tumblers",
         img: p48_img,
-        price: 34.99
+        price: 34.99,
     },
     {
         id:49,
@@ -426,161 +426,161 @@ let all_product = [
         name: "Light Brown Leather Name Patch",
         category: "leather",
         image: cp2_img,
-        current_price: 9.99
+        price: 9.99,
     },
     {
         id: 51,
         name: "Black Leather Name Patch",
         category: "leather",
         image: cp3_img,
-        curent_price: 9.99
+        price: 9.99,
     },
     {
         id: 52,
         name: "Rustic Leather Name Patch",
         category: "leather",
-        image: cp4_img,
-        current_price: 9.99
+        img: cp4_img,
+        price: 9.99,
     },
     {
         id: 53,
         name: "Red Leather Name Patch",
         category: "leather",
-        image: cp5_img,
-        current_price: 9.99
+        img: cp5_img,
+        current_price: 9.99,
     },
     {
         id: 54,
         name: "Leather Name Patch",
         category: "leather",
-        image: cp6_img,
-        current_price: 9.99
+        img: cp6_img,
+        price: 9.99,
     },
     {
         id: 55,
         name: "Gray Leather Name Tag",
         category: "leather",
-        image: cp7_img,
-        current_price: 9.99
+        imge: cp7_img,
+        price: 9.99,
     },
     {
         id: 56,
         name: "Pink Leather Name Tag",
         category: "leather",
-        image: cp8_img,
-        current_price: 9.99
+        img: cp8_img,
+        price: 9.99,
     },
     {
         id: 57,
         name: "Brown Leather Name Tag",
         category: "leather",
-        image: cp9_img,
-        current_price: 9.99
+        img: cp9_img,
+        price: 9.99,
     },
     {
         id: 58,
         name: "Red Leather Name Tag",
         category: "leather",
-        image: cp10_img,
-        current_price: 9.99
+        img: cp10_img,
+        price: 9.99,
     },
     {
         id: 59,
         name: "Black Leather Name Tag",
         category: "leather",
-        image: cp11_img,
-        current_price: 9.99
+        img: cp11_img,
+        price: 9.99,
     },
     {
         id: 60,
         name:"Brown Leather Certificate",
         category: "leather",
-        image: cp12_img,
-        current_price: 15.99
+        img: cp12_img,
+        price: 15.99,
     },
     {
         id: 61,
             name:"Obsidian Circle Award",
             category: "acrylic",
-            image: cp13_img,
-            current_price: 25.99
+            img: cp13_img,
+            price: 25.99,
     },
     {
         id: 62,
         name: "Blue Obsidian Circle Award",
         category: "acrylic",
-        image: cp14_img,
-        current_price: 25.99
+        img: cp14_img,
+        price: 25.99,
     },
     {
         id: 63,
         name: "Clear Acrylic Award",
         category: "acrylic",
-        image: cp15_img,
-        curent_price: 25.99
+        img: cp15_img,
+        price: 25.99,
     },
     {
         id: 64,
         name: "Diamond Clear Acrylic Awrd",
         category: "acrylic",
-        image: cp16_img,
-        current_price: 29.99
+        img: cp16_img,
+        price: 29.99,
     },
     {
         id: 65,
         name: "Black Acrylic Name Plate",
         category: "acrylic",
-        image: cp17_img,
-        current_price: 19.99
+        img: cp17_img,
+        price: 19.99,
     },
     {
         id: 66,
         name: "Shield Clear Acrylic Award",
         category: "acrylic",
-        image: cp18_img,
-        current_price: 29.99
+        img: cp18_img,
+        price: 29.99,
     },
     {
         id: 67,
         name: "Blue Edge Shield Acrylic Award",
         category: "acrylic",
-        image: cp19_img,
-        current_price: 29.99
+        img: cp19_img,
+        price: 29.99,
     },
     {
         id: 68,
         name: "Red w/Gold Edge Acrylic Award",
         category: "acrylics",
-        image: cp20_img,
-        current_price: 39.99
+        img: cp20_img,
+        price: 39.99,
     },
     {
         id: 69,
         name: "Walnut Wood Name Plate",
         category: "wood",
-        image: cp19_2_img,
-        current_price: 9.99
+        img: cp19_2_img,
+        price: 9.99,
     },
     {
         id: 70,
         name: "Maple Wood Name PLate",
         category: "wood",
-        image: cp20_img,
-        current_price: 9.99
+        img: cp20_img,
+        price: 9.99,
     },
     {
         id: 71,
         name: "Walnut Wood USB",
         category: "wood",
-        image: cp21_img,
-        current_price: 9.99
+        img: cp21_img,
+        price: 9.99,
     },
     {
         id: 72,
         name:"Black Metal USB",
         category: "metal",
-        image: cp22_img,
-        current_price: 15.99
+        img: cp22_img,
+        price: 15.99,
     },
 
 ]
