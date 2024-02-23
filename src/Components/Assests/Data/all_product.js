@@ -47,6 +47,28 @@ import p46_img from '../Images/p46_img.jpg'
 import p47_img from '../Images/p47_img.jpg'
 import p48_img from '../Images/p49_img.jpg'
 import p49_img from '../Images/p48_img.jpg'
+import cp2_img from '../Images/cp2_leather.jpg'
+import cp3_img from '../Images/cp3_leatherblack.jpg'
+import cp4_img from '../Images/cp4_leatherrustic.jpg'
+import cp5_img from '../Images/cp5_leatherred.jpg'
+import cp6_img from '../Images/cp6_leatherBatch.jpg'
+import cp7_img from '../Images/cp7_leatherPatchgrey.jpg'
+import cp8_img from '../Images/cp8_leatherPatchpink.jpg'
+import cp9_img from '../Images/cp9_leatherTagbrown.jpg'
+import cp10_img from '../Images/cp10_leatherTagred.jpg'
+import cp11_img from '../Images/cp11_leatherTagblack.jpg'
+import cp12_img from '../Images/cp12_leatherCertifbrown.jpg'
+import cp13_img from '../Images/cp13_acrylicObsidian.jpg'
+import cp14_img from '../Images/cp14_obsidianCircle.jpg'
+import cp15_img from '../Images/cp15_acrylicCircle.jpg'
+import cp16_img from '../Images/cp16_diamondAcrylic.jpg'
+import cp17_img from '../Images/cp17_blackAcrylicPlate.jpg'
+import cp18_img from '../Images/cp18_acrylicClear.jpg'
+import cp19_img from '../Images/cp19_acrylicBlueEdge.jpg'
+import cp19_2_img from '../Images/cp19_nameWalnut.jpg'
+import cp20_img from '../Images/cp20_nameMaple.jpg'
+import cp21_img from '../Images/cp21_USBWalnut.jpg'
+import cp22_img from '../Images/cp22_USBMetal.jpg'
 
 
 
@@ -399,7 +421,167 @@ let all_product = [
         img: p49_img,
         price: 34.99,
     },
-
+    {
+        id: 50,
+        name: "Light Brown Leather Name Patch",
+        category: "leather",
+        image: cp2_img,
+        current_price: 9.99
+    },
+    {
+        id: 51,
+        name: "Black Leather Name Patch",
+        category: "leather",
+        image: cp3_img,
+        curent_price: 9.99
+    },
+    {
+        id: 52,
+        name: "Rustic Leather Name Patch",
+        category: "leather",
+        image: cp4_img,
+        current_price: 9.99
+    },
+    {
+        id: 53,
+        name: "Red Leather Name Patch",
+        category: "leather",
+        image: cp5_img,
+        current_price: 9.99
+    },
+    {
+        id: 54,
+        name: "Leather Name Patch",
+        category: "leather",
+        image: cp6_img,
+        current_price: 9.99
+    },
+    {
+        id: 55,
+        name: "Gray Leather Name Tag",
+        category: "leather",
+        image: cp7_img,
+        current_price: 9.99
+    },
+    {
+        id: 56,
+        name: "Pink Leather Name Tag",
+        category: "leather",
+        image: cp8_img,
+        current_price: 9.99
+    },
+    {
+        id: 57,
+        name: "Brown Leather Name Tag",
+        category: "leather",
+        image: cp9_img,
+        current_price: 9.99
+    },
+    {
+        id: 58,
+        name: "Red Leather Name Tag",
+        category: "leather",
+        image: cp10_img,
+        current_price: 9.99
+    },
+    {
+        id: 59,
+        name: "Black Leather Name Tag",
+        category: "leather",
+        image: cp11_img,
+        current_price: 9.99
+    },
+    {
+        id: 60,
+        name:"Brown Leather Certificate",
+        category: "leather",
+        image: cp12_img,
+        current_price: 15.99
+    },
+    {
+        id: 61,
+            name:"Obsidian Circle Award",
+            category: "acrylic",
+            image: cp13_img,
+            current_price: 25.99
+    },
+    {
+        id: 62,
+        name: "Blue Obsidian Circle Award",
+        category: "acrylic",
+        image: cp14_img,
+        current_price: 25.99
+    },
+    {
+        id: 63,
+        name: "Clear Acrylic Award",
+        category: "acrylic",
+        image: cp15_img,
+        curent_price: 25.99
+    },
+    {
+        id: 64,
+        name: "Diamond Clear Acrylic Awrd",
+        category: "acrylic",
+        image: cp16_img,
+        current_price: 29.99
+    },
+    {
+        id: 65,
+        name: "Black Acrylic Name Plate",
+        category: "acrylic",
+        image: cp17_img,
+        current_price: 19.99
+    },
+    {
+        id: 66,
+        name: "Shield Clear Acrylic Award",
+        category: "acrylic",
+        image: cp18_img,
+        current_price: 29.99
+    },
+    {
+        id: 67,
+        name: "Blue Edge Shield Acrylic Award",
+        category: "acrylic",
+        image: cp19_img,
+        current_price: 29.99
+    },
+    {
+        id: 68,
+        name: "Red w/Gold Edge Acrylic Award",
+        category: "acrylics",
+        image: cp20_img,
+        current_price: 39.99
+    },
+    {
+        id: 69,
+        name: "Walnut Wood Name Plate",
+        category: "wood",
+        image: cp19_2_img,
+        current_price: 9.99
+    },
+    {
+        id: 70,
+        name: "Maple Wood Name PLate",
+        category: "wood",
+        image: cp20_img,
+        current_price: 9.99
+    },
+    {
+        id: 71,
+        name: "Walnut Wood USB",
+        category: "wood",
+        image: cp21_img,
+        current_price: 9.99
+    },
+    {
+        id: 72,
+        name:"Black Metal USB",
+        category: "metal",
+        image: cp22_img,
+        current_price: 15.99
+    },
 
 ]
 
