@@ -9,6 +9,8 @@ import Product from './Pages/Product.jsx';
 import Cart from './Pages/Cart.jsx'
 import LoginSignup from './Pages/LoginSingup.jsx'
 import Footer from './Components/Footer/Footer.jsx'
+import tumbler_banner from './Components/Assests/Images/Tumbler Banner.png'
+import services_banner from './Components/Assests/Images/Your Memories.png'
 
 function App() {
     return (
@@ -18,8 +20,8 @@ function App() {
       <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/Shop' element={<Shop/>}/>
-          <Route path='/Services' element={<ShopCategory catageory="Services"/>}/>
-          <Route path='/Tumblers' element={<ShopCategory category='Tumblers'/>}/>
+          <Route path='/Services' element={<ShopCategory banner={services_banner} catageory="Services"/>}/>
+          <Route path='/Tumblers' element={<ShopCategory banner={tumbler_banner} category='Tumblers'/>}/>
           <Route path= '/product' element={<Product/>}>
             <Route path=':productId' element={<Product/>}/>
          </Route>

@@ -16,11 +16,6 @@ const Navbar = () => {
       <div className="nav-logo">
         <img src={Logo} alt="" />
       </div>
-      <div class="navbar-hamburger">
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </div>
       <ul className="nav-menus">
         <li onClick={()=>{setMenu("home")}}><Link to='/'>Home</Link>{menu==="home"?<h/>:<></>}</li>
         <li onClick={()=>{setMenu("shop")}}><Link to='/shop'>Shop</Link>{menu==="shop"?<h/>:<></>}</li>
