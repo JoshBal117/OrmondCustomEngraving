@@ -11,12 +11,15 @@ import './App.css'
 
 
 import reportWebVitals from './reportWebVitals';
+import ShopContextProvider from './Context/Shopcontext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <ShopContextProvider>
+      <App />
+  </ShopContextProvider>
+    
+ 
 );
 
 // If you want to start measuring performance in your app, pass a function
