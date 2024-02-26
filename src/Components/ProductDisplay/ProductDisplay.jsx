@@ -4,7 +4,7 @@ const ProductDisplay = (props) => {
     const {product} = props;
   return (
     <div className='productdisplay'>
-        <div className="prodisplay-left">
+        <div className="productdisplay-left">
             <div className="productdisplay-img-list">
                 <img src={product.img} alt="" />
                 <img src={product.img} alt="" />
