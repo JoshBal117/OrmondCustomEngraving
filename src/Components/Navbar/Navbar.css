@@ -1,7 +1,7 @@
 .navbar{
   display: flex;
   justify-content: space-around;
-  padding: 20px;
+  padding: 40px;
   box-shadow: 0 1px 3px -2px black;
   background: linear-gradient(100deg, #6ABB03, #e1ffea22 90%) ;
 

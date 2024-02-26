@@ -41,5 +41,41 @@
     display: flex;
     margin: 40px 8px;
     gap: 30px;
-    font-size: 24;
+    font-size: 24px;
+    font-weight: 700;
+    
+}
+
+
+.productdisplay-right-color-h1{
+    margin-top: 55px;
+    color: #656565;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.productdisplay-right-color{
+    display: flex;
+    margin: 30 0px;
+    gap: 20px;
+}
+
+.productdisplay-right-color div{
+    padding: 18px 24px;
+    background: #fbfbfb;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.productdisplay-right button{
+    padding: 24px 40 px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 200;
+    color: white;
+    background: #ff4141;
+    margin-bottom: 40px;
+    border: none;
+    outline: none;
 }

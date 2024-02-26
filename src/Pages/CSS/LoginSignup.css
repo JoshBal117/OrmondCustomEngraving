@@ -3,6 +3,7 @@
     height: 80vh;
     background: #5deb20;
     padding-top: 100px;
+    margin-bottom: 10px;
 }
 
 .loginsignup-container{
@@ -11,10 +12,11 @@
     background: white;
     margin: auto;
     padding: 40px 60px;
+    padding-bottom: 30px;
 }
 
 .loginsignup-container h1{
-    margin: 20px 0px;
+    margin: 20px 20px;
 }
 
 .loginsignup-fields{
