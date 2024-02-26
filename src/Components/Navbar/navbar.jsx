@@ -19,10 +19,10 @@ const Navbar = () => {
       <ul className="nav-menus">
         <li onClick={()=>{setMenu("home")}}><Link to='/'>Home</Link>{menu==="home"?<h/>:<></>}</li>
         <li onClick={()=>{setMenu("shop")}}><Link to='/shop'>Shop</Link>{menu==="shop"?<h/>:<></>}</li>
-        <li onClick={()=>{setMenu("services")}}><Link to='/services'>Services</Link>{menu==="about"?<h/>:<></>}</li>
-        <li onClick={()=>{setMenu("contact")}}><Link to='/Tumblers'>Tumblers</Link>{menu==="tumblers"?<h/>:<></>}</li>
-        <li onClick={()=>{setMenu("contact")}}><Link to='/Acrylics'>Acrylics</Link>{menu==="acrylics"?<h/>:<></>}</li>
-        <li onClick={()=>{setMenu("contact")}}><Link to='/Leather'>Leathers</Link>{menu==="leather"?<h/>:<></>}</li>
+        <li onClick={()=>{setMenu("services")}}><Link to='/services'>Services</Link>{menu==="services"?<h/>:<></>}</li>
+        <li onClick={()=>{setMenu("tumblers")}}><Link to='/tumblers'>Tumblers</Link>{menu==="tumblers"?<h/>:<></>}</li>
+        <li onClick={()=>{setMenu("acrylics")}}><Link to='/acrylics'>Acrylics</Link>{menu==="acrylics"?<h/>:<></>}</li>
+        <li onClick={()=>{setMenu("leather")}}><Link to='/leather'>Leathers</Link>{menu==="leather"?<h/>:<></>}</li>
         
       </ul>
       <div className="nav-login-cart">
