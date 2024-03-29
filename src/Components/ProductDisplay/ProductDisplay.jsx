@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { ShopContext } from '../../Context/Shopcontext';
 
 const ProductDisplay = (props) => {
     const {product} = props;
+    const {addToCart} = useContext(ShopContext)
   return (
     <div className='productdisplay'>
         <div className="productdisplay-left">
@@ -18,7 +20,7 @@ const ProductDisplay = (props) => {
         <div className="displayproduct-right">
             <h1>{product.name}</h1>
             <div className="productdisplay-current-price">
-                ${product.current_price}
+                <div classname='productdisplay-current-price'>${product.current_price}</div>
             </div>
            <div className="productdisplay-right-description">
 
@@ -36,7 +38,7 @@ const ProductDisplay = (props) => {
                 <div>Stainless Steel</div>
             </div>
            </div>
-           <button>ADD TO CART</button>
+           <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
            <p className="productdisplay-right-category"></p>
         </div>
     </div>

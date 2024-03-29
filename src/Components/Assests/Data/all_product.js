@@ -493,7 +493,7 @@ let all_product = [
     },
     {
         id: 60,
-        name:"Brown Leather Certificate",
+        name:"Brown Leather Certificate Holder",
         category: "leather",
         image: cp12_img,
         current_price: 15.99,
