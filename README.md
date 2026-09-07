@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Ormond Custom Engraving
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The original React project, updated for a quote-first business website with the owner's green branding (#6abb03).
 
-## Available Scripts
+## Run the local preview
 
-In the project directory, you can run:
+Open this folder in VS Code, then run this in its PowerShell terminal:
 
-### `npm start`
+```powershell
+npm.cmd start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open the local address printed in the terminal (normally http://localhost:3000). Keep that terminal running while reviewing the site. Stop it with Ctrl+C.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+On this computer, npm.cmd works; the npm.ps1 command resolves to a missing npm CLI. There is no need to reinstall dependencies to run this preview.
 
-### `npm test`
+```powershell
+npm.cmd run build
+npm.cmd test -- --watchAll=false --runInBand
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The existing Create React App structure and package lock are preserved. Migration to newer tooling can be a separate change after the preview is reviewed.
 
-### `npm run build`
+## Business details and branding
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Edit contact information in src/data/business.js.
+- Confirmed email: spacedad63@icloud.com.
+- Confirmed phone: 386-405-3424.
+- The public/index.html noscript fallback also contains the contact information.
+- Branding tokens are in src/index.css.
+- Home layout is in src/Pages/Home.jsx and src/Pages/CSS/Home.css.
+- Main navigation becomes a disclosure menu on smaller screens.
+- Market copy says Daytona Beach farmers market. No booth number, address, hours, or schedule has been assumed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Quote workflow in this preview
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Customers can call directly or fill out the quote form. Preparing a request produces a mailto link, and the customer must review and send it in their email app. A copyable request is available if no email app opens.
 
-### `npm run eject`
+The site does not send email itself, save submissions, upload artwork, take payment, or create customer accounts. Customers can attach artwork in their email app. Login and cart URLs lead to the quote page.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Content to confirm before public launch
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Confirm the exact business name, available services, and final wording with the owner.
+- Review all product photographs and permission to use them. The existing wood-detail image is labeled as inspiration; it is not presented as the owner's completed work.
+- Supply original finished-work photos and higher-resolution catalog images. Many current product pictures are small supplier images.
+- Confirm product availability and pricing. The quote-first preview does not publish the old unverified prices.
+- Product 68 has an acrylic award title paired with a maple name plate picture. The original record is retained but hidden until that pairing is corrected.
+- Confirm farmers market name, dates, booth location, pickup/shipping, and turnaround expectations.
+- Choose a domain, hosting, and a permanent business email when ready.
+- Add automatic quote delivery and saved submissions, with server-side validation and spam protection.
+- Test on actual phones and desktop browsers, including keyboard use, zoom, email-app handling, and image loading.
+- For a future host using clean browser routes, configure direct-route fallback to index.html. The GitHub Pages preview uses hash routes instead. Verify metadata, privacy information, and all contact paths before a full launch.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## GitHub Pages preview
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Repository: https://github.com/JoshBal117/OrmondCustomEngraving
 
-## Learn More
+Preview address after a successful deployment: https://joshbal117.github.io/OrmondCustomEngraving/
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In the repository's Settings → Pages, select **GitHub Actions** as the publishing source. The workflow in `.github/workflows/pages.yml` installs the locked dependencies, runs the tests, builds the site, and publishes it whenever `master` is updated. It can also be started from the repository's Actions tab.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Run the same production build locally with `npm.cmd run build:pages`. It places assets under `/OrmondCustomEngraving` and uses hash routes such as `/#/contact` so shared links and refreshes work on static hosting. The normal `npm.cmd start` preview keeps its existing clean routes.
 
-### Code Splitting
+GitHub Pages publishes a static preview. The quote form still opens the customer's email app; it does not automatically send or store requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Verification
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The automated tests cover homepage navigation, menu interactions, product-to-quote selection, unavailable routes, confirmed contact details, quote validation, and email encoding. Browser and real-device visual review is a separate launch check.

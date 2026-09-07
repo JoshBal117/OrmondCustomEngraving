@@ -1,42 +1,16 @@
-import React from 'react'
-import './Footer.css'
-import instagram_icon from '../Assests/Images/instagram_logo_icon.png'
-import facebook_icon from '../Assests/Images/facebook_logo_icon.png'
-import pinterest_icon from '../Assests/Images/pinterest_icon.png'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { business } from '../../data/business';
+import './Footer.css';
 
-const Footer = () => {
-    return(
-        <div className='footer'>
-            <div className="footer-logo">
-                <img src="" alt="" />
-                <p>Ormond Custom Engraving</p>
-            </div>
-            <ul className='footer-links'>
-                <li>Company</li>
-                <li>Products</li>
-                <li>Office</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-            <div className='footer-social-icon'>
-                <div className='footer-icon-container'>
-                    <img src={instagram_icon} alt="" />
-                </div>
-                <div className='footer-icon-container'>
-                    <img src={facebook_icon} alt="" />
-                </div>
-                <div className='footer-icon-container'>
-                    <img src={pinterest_icon} alt="" />
-                </div>
-            </div>
-            <div className="footer-copyight">
-                <hr />
-                <p>Copyright @ 2024 All Rights Reserved</p>
-            </div>
-        </div>
-        
-    )
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div className="container footer-main">
+        <div><Link className="footer-wordmark" to="/">ORMOND<span>CUSTOM ENGRAVING</span></Link><p>Make it personal.</p><a className="footer-phone" href={business.phoneHref}>{business.phone}</a></div>
+        <nav aria-label="Footer navigation"><Link to="/shop">Products</Link><Link to="/services">Services</Link><Link to="/about">About</Link><Link to="/contact">Request a quote</Link></nav>
+      </div>
+      <div className="container footer-bottom"><p>© {new Date().getFullYear()} Ormond Custom Engraving</p><p>Custom gifts. Lasting impressions.</p></div>
+    </footer>
+  );
 }
-
-
-export default Footer

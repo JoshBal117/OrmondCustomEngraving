@@ -79,14 +79,14 @@ let all_product = [
     {
         id: 1,
         name: "Acrylic Award Triangle Clear Yellow Stripes",
-        category: "Acrylics",
+        category: "acrylics",
         image: p1_img,
         current_price:50.00, 
     },
     {
         id: 2,
-        name: "Acrylic Award Triangle Clear Blue Strips",
-        category: "Acrylics",
+        name: "Acrylic Award Triangle Clear Blue Stripes",
+        category: "acrylics",
         image: p2_img,
         current_price: 50.00,
     
@@ -402,7 +402,7 @@ let all_product = [
     },
  {
         id:47,
-        name: "150z White Insulated Mug Tumbler",
+        name: "15oz White Insulated Mug Tumbler",
         category: "tumblers",
         image: p47_img,
         current_price: 29.99,
@@ -416,8 +416,8 @@ let all_product = [
     },
     {
         id:49,
-        name: "16oz Black  Insulated Pint Tumblr",
-        category: "tumbler",
+        name: "16oz Black Insulated Pint Tumbler",
+        category: "tumblers",
         image: p49_img,
         current_price: 34.99,
     },
@@ -521,7 +521,7 @@ let all_product = [
     },
     {
         id: 64,
-        name: "Diamond Clear Acrylic Awrd",
+        name: "Diamond Clear Acrylic Award",
         category: "acrylics",
         image: cp16_img,
         current_price: 29.99,
@@ -563,7 +563,7 @@ let all_product = [
     },
     {
         id: 70,
-        name: "Maple Wood Name PLate",
+        name: "Maple Wood Name Plate",
         category: "wood",
         image: cp20_img,
         current_price: 9.99,

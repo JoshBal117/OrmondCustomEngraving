@@ -1,79 +1,14 @@
-.shopcategory-banner{
-    display: block;
-    margin: 30px auto;
-    width: 82%;
+.catalog-section { padding-top: 32px; }
+.category-filters { display: flex; flex-wrap: wrap; gap: 10px; }
+.category-filters a { min-height: 44px; display: inline-flex; align-items: center; padding: 10px 16px; border: 1px solid var(--line); border-radius: 4px; font-size: .9375rem; font-weight: 600; }
+.category-filters a:hover { border-color: var(--brand-green-dark); }
+.category-filters a[aria-current="page"] { background: var(--ink); border-color: var(--ink); color: white; }
+.catalog-note { display: flex; justify-content: space-between; gap: 16px 30px; margin-block: 28px; font-size: .875rem; color: var(--muted); }
+.catalog-note p:first-child { color: var(--ink); font-weight: 650; flex-shrink: 0; }
+.product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px 24px; }
+@media (max-width: 1050px) { .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 750px) {
+  .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; }
+  .catalog-note { flex-direction: column; gap: 8px; }
 }
-
-.shopcategory-indexSort{
-    display: flex;
-    margin: 0px 170px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.shopcategory-sort{
-    padding: 10px 20px;
-    border-radius: 48px;
-    border: 1px solid #888;
-}
-
-.shopcategory-indexSort p span{
-    font-weight: 600;
-
-}
-
-.shopcategory-products{
-    margin: 20px 170px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.shopcategory-loadmore{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 150px auto;
-    width: 233px;
-    height: 69px;
-    border-radius: 75px;
-    background: #ededed;
-    color: #787878;
-    font-size: 18px;
-    ;
-}
-
-.loginsignup-container  button{
-    width: 580 px;
-    height: 72px;
-    color: white;
-    background: #ff4141;
-    margin-top: 30px;
-    border: none;
-    font-size: 24px;
-    font-weight: 500;
-    cursor: pointer;
-
-}
-
-.loginsignup-login{
-    margin-top: 20px;
-    color: #5c5c5c;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.loginsignup-login span{
-    color: #ff4141;
-    font-weight: 600;
-
-}
-
-.loginsignup-agree{
-    display: flex;
-    align-items:center;
-    margin-top: 25px;
-    gap: 20px;
-    color: #5c5c5c;
-    font-size: 18px;
-    font-weight: 500;
-}
+@media (max-width: 370px) { .product-grid { grid-template-columns: 1fr; } }

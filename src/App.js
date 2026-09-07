@@ -1,43 +1,67 @@
-
-import './App.css';
-import Navbar from './Components/Navbar/navbar.jsx'
-import { BrowserRouter,Routes,Route} from 'react-router-dom';
-import Home from './Pages/Home.jsx'
+import React, { useEffect, useRef } from 'react';
+import { BrowserRouter, HashRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import Navbar from './Components/Navbar/navbar';
+import Footer from './Components/Footer/Footer';
+import Home from './Pages/Home';
 import Shop from './Pages/Shop';
 import ShopCategory from './Pages/ShopCategory';
-import Product from './Pages/Product.jsx';
-import Cart from './Pages/Cart.jsx'
-import LoginSignup from './Pages/LoginSingup.jsx'
-import Footer from './Components/Footer/Footer.jsx'
-import tumbler_banner from './Components/Assests/Images/Tumbler Banner.png'
-import services_banner from './Components/Assests/Images/Your Memories.png'
+import Product from './Pages/Product';
+import Services from './Pages/Services';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
+import NotFound from './Pages/NotFound';
+import { categories, findProduct } from './data/catalog';
+import './App.css';
 
-function App() {
-    return (
-    <div>
-      <BrowserRouter>
-      <Navbar/>
-      <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/Shop' element={<Shop/>}/>
-          <Route path='/Services' element={<ShopCategory banner={services_banner} category="Services"/>}/>
-          <Route path='/Acrylics' element={<ShopCategory category="acrylics"/>}/>
-          <Route path='/Leather' element={<ShopCategory category="leather"/>}/>
-          <Route path='/Tumblers' element={<ShopCategory banner={tumbler_banner} category='tumblers'/>}/>
-          <Route path= '/product' element={<Product/>}>
-            <Route path=':productId' element={<Product/>}/>
-         </Route>
-         <Route path='/cart' element={<Cart/>}/>
-         <Route path= '/login' element={<LoginSignup/>}/>
-      </Routes>
-      <Footer/>
-      </BrowserRouter>
-      
-    </div>
-    
-    
-    
-    )
-};
+function RouteEffects() {
+  const location = useLocation();
+  const previousPath = useRef(location.pathname);
+  useEffect(() => {
+    const path = location.pathname.toLowerCase();
+    const category = categories.find(item => '/' + item.id === path);
+    const product = path.startsWith('/product/') ? findProduct(path.split('/')[2]) : null;
+    const titles = { '/': 'Custom gifts & engraving', '/shop': 'Products', '/services': 'Services', '/about': 'About', '/contact': 'Request a quote' };
+    const title = product?.name || category?.title || titles[path] || 'Page not found';
+    document.title = title + ' | Ormond Custom Engraving';
+    if (previousPath.current !== location.pathname) {
+      window.scrollTo(0, 0);
+      document.getElementById('main-content')?.focus();
+      previousPath.current = location.pathname;
+    }
+  }, [location.pathname]);
+  return null;
+}
 
-export default App;
+export default function App() {
+  // Pages serves static files, so keep client routes after the URL's #.
+  // The normal local preview continues to use clean browser routes.
+  const SiteRouter = process.env.REACT_APP_ROUTER === 'hash' ? HashRouter : BrowserRouter;
+  return (
+    <SiteRouter>
+      <div className="site-shell">
+        <a className="skip-link" href="#main-content" onClick={event => {
+          event.preventDefault();
+          document.getElementById('main-content')?.focus();
+        }}>Skip to content</a>
+        <RouteEffects />
+        <Navbar />
+        <main id="main-content" tabIndex="-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/services" element={<Services />} />
+            {categories.map(category => <Route key={category.id} path={'/' + category.id} element={<ShopCategory category={category.id} />} />)}
+            <Route path="/product/:productId" element={<Product />} />
+            <Route path="/product" element={<Navigate to="/shop" replace />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cart" element={<Navigate to="/contact" replace />} />
+            <Route path="/login" element={<Navigate to="/contact" replace />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </SiteRouter>
+  );
+}

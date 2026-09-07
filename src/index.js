@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM  from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 
 import App from './App'
@@ -13,7 +13,7 @@ import './App.css'
 import reportWebVitals from './reportWebVitals';
 import ShopContextProvider from './Context/Shopcontext';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(
   <ShopContextProvider>
       <App />

@@ -1,71 +1,14 @@
-.footer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    background: #ebebeb;
-    padding: 100px;
-    margin-top: 10px;
-   
-   
-}
-
-.footer-logo{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-}
-
-.footer-logo p{
-    color: #36454F;
-    font-size: 46px;
-    font-weight: 700;
-}
-
-.footer-links{
-    display: flex;
-    list-style: none;
-    gap: 50px;
-    color: #36454F;
-    font-size: 20px;
-}
-
-.footer-links li{
-    cursor: pointer;
-}
-
-.footer-social-icon{
-    display: flex;
-    gap: 20px;
-}
-
-
-.footer-icons-container{
-    padding: 10px;
-    padding-bottom: 6px;
-    background: #fbfbfb;
-    border: 1px solid #ebebeb;
-
-}
-
-.footer-copyright{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    margin-bottom: 30px;
-    color: #1a1a1a;
-    font-size: 20px;
-}
-
-.footer-copyright hr{
-    width: 80%;
-    border: none;
-    border-radius: 10px;
-    height: 3px;
-    background: #ebebeb;
-    
+.footer { padding-block: 48px 24px; background: var(--ink); color: white; border-top: 5px solid var(--brand-green); }
+.footer-main { display: flex; justify-content: space-between; gap: 32px; padding-bottom: 38px; }
+.footer-wordmark { display: inline-block; color: #a3e652; font-size: 1.65rem; font-weight: 800; letter-spacing: .08em; }
+.footer-wordmark span { display: block; font-size: .75rem; letter-spacing: .12em; margin-top: 3px; }
+.footer-main p { margin-top: 18px; color: #c9d4c2; }
+.footer-phone { display: inline-block; padding-block: 12px; text-decoration: underline; text-underline-offset: 4px; }
+.footer-main nav { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 8px 28px; }
+.footer-main nav a { display: inline-block; min-height: 44px; padding-block: 12px; }
+.footer-main nav a:hover { color: #a3e652; text-decoration: underline; text-underline-offset: 5px; }
+.footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; border-top: 1px solid #43513a; padding-top: 24px; color: #c9d4c2; font-size: .875rem; }
+@media (max-width: 700px) {
+  .footer-main { flex-direction: column; gap: 20px; }
+  .footer-main nav { display: grid; grid-template-columns: 1fr 1fr; }
 }

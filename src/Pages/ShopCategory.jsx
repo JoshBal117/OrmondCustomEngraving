@@ -1,37 +1,23 @@
-import React, {useContext} from "react";
-import './CSS/ShopCategory.css'
-import { ShopContext } from "../Context/Shopcontext";
-import dropdown_icon from '../Components/Assests/Images/drop_down.png'
-import Item from "../Components/item/item";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { categories, products } from '../data/catalog';
+import Item from '../Components/item/item';
+import './CSS/ShopCategory.css';
 
-const ShopCategory = (props) => {
-    const {all_product} =useContext(ShopContext);
-    return (
-        <div className="shop-category"> 
-            <img src={props.banner} alt="" />
-            <div className="shopcategory-indexSort">
-                <p>
-                    <span>Showing 1-12</span> out of products
-                </p>
-                <div className="shopcategory-sort">
-                    Sort by <img src={dropdown_icon} alt="" />
-                </div>
-            </div>
-            <div className="shopcategory-products">
-                {all_product.map((item,i)=>{
-                    if (props.category===item.category) {
-                        return <Item key={i} id={item.id}  name={item.name} image={item.image} current_price={item.current_price}/>
-                    }
-                    else{
-                        return null;
-                    }
-                })}
-            </div>
-            <div className="shopcategory-loadmore">
-                Explore more
-            </div>
-        </div>
-    )
+export default function ShopCategory({ category }) {
+  const selectedCategory = categories.find(item => item.id === category);
+  const visibleProducts = category ? products.filter(item => item.category === category) : products;
+  return (
+    <>
+      <section className="page-heading"><div className="container"><p className="eyebrow">FIND YOUR STARTING POINT</p><h1>{selectedCategory?.title || 'Make something yours.'}</h1><p>{selectedCategory?.description || 'Explore products for your next gift, event, or business project. Choose an item to start a custom quote.'}</p></div></section>
+      <section className="section container catalog-section" aria-label="Product catalog">
+        <nav className="category-filters" aria-label="Product categories">
+          <Link to="/shop" aria-current={!category ? 'page' : undefined}>All products</Link>
+          {categories.map(item => <Link key={item.id} to={'/' + item.id} aria-current={category === item.id ? 'page' : undefined}>{item.title}</Link>)}
+        </nav>
+        <div className="catalog-note"><p>{visibleProducts.length} products to personalize</p><p>Designs shown are examples. Availability and pricing are confirmed with your quote.</p></div>
+        <div className="product-grid">{visibleProducts.map(item => <Item key={item.id} {...item} />)}</div>
+      </section>
+    </>
+  );
 }
-
-export default ShopCategory

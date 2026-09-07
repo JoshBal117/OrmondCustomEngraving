@@ -1,37 +1,41 @@
-import React, { useState } from "react"; 
-import {Link} from "react-router-dom";
-import './Navbar.css';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import Logo from '../Assests/Images/OCE_LOGO3.png';
-import cart_icon from '../Assests/Images/cart-icon.png';
+import './Navbar.css';
 
+const links = [['/', 'Home'], ['/shop', 'Products'], ['/services', 'Services'], ['/about', 'About']];
 
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const toggle = useRef(null);
+  const location = useLocation();
 
+  useEffect(() => { setOpen(false); }, [location]);
 
-const Navbar = () => {
-
-    const [menu,setMenu] = useState("shop");
+  function handleKeyDown(event) {
+    if (event.key === 'Escape' && open) {
+      setOpen(false);
+      toggle.current?.focus();
+    }
+  }
 
   return (
-    <nav className="navbar">
-      <div className="nav-logo">
-        <img src={Logo} alt="" />
+    <header className="site-header" onKeyDown={handleKeyDown}>
+      <div className="brand-strip">Custom gifts. Meaningful awards. Your personal touch.</div>
+      <div className="navbar container">
+        <Link className="brand" to="/" aria-label="Ormond Custom Engraving home">
+          <img src={Logo} width="75" height="60" alt="" />
+          <span className="brand-name">ORMOND<span>CUSTOM ENGRAVING</span></span>
+        </Link>
+        <button className="menu-toggle" ref={toggle} type="button" aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen(!open)}>
+          <span>{open ? 'Close' : 'Menu'}</span>
+          <span className={'menu-icon ' + (open ? 'is-open' : '')} aria-hidden="true"><span /><span /></span>
+        </button>
+        <nav id="main-navigation" className={'main-navigation ' + (open ? 'is-open' : '')} aria-label="Main navigation">
+          {links.map(([to, label]) => <NavLink key={to} to={to} end={to === '/'} onClick={() => setOpen(false)}>{label}</NavLink>)}
+          <Link className="button button-dark nav-quote" to="/contact" onClick={() => setOpen(false)}>Request a quote <span className="arrow" aria-hidden="true">↗</span></Link>
+        </nav>
       </div>
-      <ul className="nav-menus">
-        <li onClick={()=>{setMenu("home")}}><Link to='/'>Home</Link>{menu==="home"?<h/>:<></>}</li>
-        <li onClick={()=>{setMenu("shop")}}><Link to='/shop'>Shop</Link>{menu==="shop"?<h/>:<></>}</li>
-        <li onClick={()=>{setMenu("services")}}><Link to='/services'>Services</Link>{menu==="services"?<h/>:<></>}</li>
-        <li onClick={()=>{setMenu("tumblers")}}><Link to='/tumblers'>Tumblers</Link>{menu==="tumblers"?<h/>:<></>}</li>
-        <li onClick={()=>{setMenu("acrylics")}}><Link to='/acrylics'>Acrylics</Link>{menu==="acrylics"?<h/>:<></>}</li>
-        <li onClick={()=>{setMenu("leather")}}><Link to='/leather'>Leathers</Link>{menu==="leather"?<h/>:<></>}</li>
-        
-      </ul>
-      <div className="nav-login-cart">
-        <Link to='/login'><button>Login</button></Link>
-        <Link to='/cart'><img src={cart_icon} alt=""/></Link>
-        <div className="nav-cart-count">0</div>
-      </div>
-    </nav>
-  )
+    </header>
+  );
 }
-
-export default Navbar

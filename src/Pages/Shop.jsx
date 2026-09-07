@@ -1,19 +1,6 @@
-import React from "react";
-import Hero from '../Components/Hero/Hero'
-import Popular from "../Components/Popular/Popular";
-import Collections from "../Components/Collections/Collections";
+import React from 'react';
+import ShopCategory from './ShopCategory';
 
-const Shop = () => {
-
-    return(
-        <div>
-            <Hero/>
-            <Popular/>
-            <Collections/>
-        </div>
-    )
-
-       
-};
-
-export default Shop
+export default function Shop() {
+  return <ShopCategory />;
+}

@@ -1,21 +1,14 @@
-import React from 'react'
-import './item.css'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './item.css';
 
-const  Item = (props) => {
-  
-    return (
-        <div className='item'>
-            <Link to={`/product/${props.id}`}><img onClick={window.scrollTo(0,0)} src={props.image} alt="" /></Link>
-            <p>{props.name}</p>
-            <div className='item-prices'>
-                <div className='item-prices-current'>
-                    ${props.current_price}
-                </div>
-            </div>        
-            
-    </div>
-    )
+export default function Item({ id, name, image }) {
+  return (
+    <article className="item">
+      <Link className="product-card-link" to={'/product/' + id}>
+        <div className="product-card-image"><img src={image} alt="" loading="lazy" /></div>
+        <div className="product-card-copy"><h2>{name}</h2><span>View & personalize <span aria-hidden="true">↗</span></span></div>
+      </Link>
+    </article>
+  );
 }
-
-export default Item
